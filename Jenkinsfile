@@ -6,20 +6,23 @@ try {
     node {
       cleanWs()
       checkout scm
+      
+        def tfHome = tool name: 'Terraform'
+        env.PATH = "${tfHome}:${env.PATH}"
     }
   }
 
-  stage('Set Terraform path') {
+//  stage('Set Terraform path') {
 //  steps {
 //  script {
-  def tfHome = tool name: 'Terraform'
-  env.PATH = "${tfHome}:${env.PATH}"
+//  def tfHome = tool name: 'Terraform'
+//  env.PATH = "${tfHome}:${env.PATH}"
 //  }
-  sh 'terraform — version'
+//  sh 'terraform — version'
  
  
 //  }
-  }
+//  }
 
   // Run terraform init
   stage('init') {
