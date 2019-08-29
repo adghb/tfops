@@ -35,7 +35,7 @@ try {
       ]]) {
         ansiColor('xterm') {
 //          sh 'terraform init'
-          sh '${tfHome} init'
+          sh "${tfHome} init"
         }
       }
     }
@@ -52,7 +52,7 @@ try {
       ]]) {
         ansiColor('xterm') {
 //          sh 'terraform plan'
-            sh '${tfHome} plan'
+            sh "${tfHome} plan"
         }
       }
     }
@@ -70,7 +70,7 @@ try {
           secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
         ]]) {
           ansiColor('xterm') {
-            sh '${tfHome} apply -auto-approve'
+            sh "${tfHome} apply -auto-approve"
           }
         }
       }
@@ -86,7 +86,7 @@ try {
           secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
         ]]) {
           ansiColor('xterm') {
-            sh '${tfHome} show'
+            sh "${tfHome} show"
           }
         }
       }
