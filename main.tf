@@ -13,14 +13,14 @@ resource "aws_s3_bucket" "s3test" {
 
 
 # Terraform state will be stored in S3
-terraform {
+/* terraform {
   backend "s3" {
     bucket = "s3-terraform-test-bucket"
 //    key    = "terraform.tfstate"
     region = "ap-south-1"
   }
 }
-
+*/
 # Use AWS Terraform provider
 provider "aws" {
   region = "ap-south-1"
