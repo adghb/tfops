@@ -70,7 +70,7 @@ try {
           secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
         ]]) {
           ansiColor('xterm') {
-              sh "terraform apply -input=false "tfplan""
+              sh "terraform apply -input=false -auto-approve tfplan"
 //              sh "terraform apply -auto-approve -input=false tfplan"
 //              sh "${tfHome}/terraform apply -auto-approve"
           }
