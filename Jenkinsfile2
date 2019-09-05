@@ -71,7 +71,7 @@ try {
         ]]) {
           ansiColor('xterm') {
               sh """
-              terraform apply "tfplan"
+              terraform apply tfplan
 //              terraform apply -input=false -auto-approve "tfplan"
 //              sh "terraform apply -auto-approve -input=false tfplan"
 //              sh "${tfHome}/terraform apply -auto-approve"
