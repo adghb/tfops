@@ -5,7 +5,7 @@ resource "aws_s3_bucket" "s3test" {
   versioning {
     enabled = true
   }
-  tags {
+  tags = {
     Name = "s3-terraform-test-bucket"
   }
 
