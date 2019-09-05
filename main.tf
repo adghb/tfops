@@ -1,8 +1,22 @@
+# Create s3 bucket
+resource "aws_s3_bucket" "s3test" {
+  bucket = "s3-terraform-test-bucket"
+  acl = "private"
+  versioning {
+    enabled = true
+  }
+  tags {
+    Name = "s3-terraform-test-bucket"
+  }
+
+}
+
+
 # Terraform state will be stored in S3
 terraform {
   backend "s3" {
-    bucket = "terraform-bucket-alex"
-    key    = "terraform.tfstate"
+    bucket = "s3-terraform-test-bucket"
+//    key    = "terraform.tfstate"
     region = "ap-south-1"
   }
 }
