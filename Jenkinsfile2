@@ -66,7 +66,7 @@ stage('Approval') {
       }
     }
 
-  if (env.BRANCH_NAME == 'master') {
+//  if (env.BRANCH_NAME == 'master') {
 
     // Run terraform apply
     stage('apply') {
@@ -87,7 +87,7 @@ stage('Approval') {
           }
         }
       }
-    }
+ //   }
 
     // Run terraform show
     stage('show') {
