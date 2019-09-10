@@ -90,7 +90,7 @@ stage('Approval') {
  //   }
 
     // Run terraform show
-    stage('show') {
+/*    stage('show') {
       node {
         withCredentials([[
           $class: 'AmazonWebServicesCredentialsBinding',
@@ -105,6 +105,7 @@ stage('Approval') {
         }
       }
     }
+*/    
   }
   currentBuild.result = 'SUCCESS'
 }
