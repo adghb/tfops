@@ -99,7 +99,7 @@ stage('Approval') {
           secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
         ]]) {
           ansiColor('xterm') {
-              sh "terraform show"
+//             sh "terraform show"
 //              sh "${tfHome}/terraform show"
           }
         }
